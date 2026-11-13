@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Permanent+Marker&display=swap');
+
+:root {
+ --black: #09090b;
+ --red: #b51225;
+ --bright-red: #f02b43;
+ --white: #eee9e5;
+ --silver: #a9a5aa;
+}
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ min-height: 100vh;
+ background:
+ radial-gradient(circle at 50% 12%,
+ rgba(181, 18, 37, 0.28), transparent 35%),
+ linear-gradient(160deg, #171116, #08080b 65%);
+ color: var(--white);
+ font-family: 'Cinzel', serif;
+ display: flex;
+ justify-content: center;
+ padding: 45px 18px;
+ overflow-x: hidden;
+}
+
+/* Main layout */
+
+.container {
+ width: 100%;
+ max-width: 440px;
+ text-align: center;
+ position: relative;
+}
+
+/* Profile */
+
+.profile {
+ margin-bottom: 35px;
+}
+
+.avatar {
+ width: 115px;
+height: 115px;
+margin: 0 auto 20px;
+
+border-radius: 50%;
+overflow: hidden;
+
+border: 3px solid #f02b43;
+
+box-shadow:
+0 0 15px #b51225,
+0 0 35px rgba(240, 43, 67, 0.35);
+}
+
+.avatar img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+h1 {
+ font-family: 'Permanent Marker', cursive;
+ font-size: 42px;
+ letter-spacing: 2px;
+ text-shadow: 3px 3px 0 var(--red);
+ margin-bottom: 12px;
+}
+
+.bio {
+ color: var(--silver);
+ font-size: 12px;
+ line-height: 2;
+ letter-spacing: 1px;
+}
+
+/* Social links */
+
+.links {
+ display: flex;
+ flex-direction: column;
+ gap: 17px;
+}
+
+.link {
+ position: relative;
+ display: block;
+ padding: 19px;
+ overflow: hidden;
+
+ background:
+ linear-gradient(110deg,
+ rgba(65, 19, 29, 0.9),
+ rgba(12, 12, 15, 0.95));
+
+ color: var(--white);
+ text-decoration: none;
+
+ border: 1px solid #8e192b;
+ border-left: 4px solid var(--red);
+ border-radius: 5px;
+
+ font-family: 'Permanent Marker', cursive;
+ font-size: 18px;
+ letter-spacing: 1px;
+
+ transition: 0.3s ease;
+}
+
+.link:hover {
+ background: linear-gradient(
+ 110deg,
+ #761525,
+ #171116
+ );
+
+ border-color: var(--bright-red);
+ transform: translateX(6px);
+
+ box-shadow:
+ 0 0 12px rgba(240, 43, 67, 0.5);
+}
+
+/* Footer */
+
+footer {
+ margin-top: 45px;
+ color: #898187;
+ font-size: 11px;
+ letter-spacing: 2px;
+ line-height: 2.5;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 480px) {
+ body {
+ padding: 35px 18px;
+ }
+
+ h1 {
+ font-size: 36px;
+ }
+
+ .link {
+ font-size: 16px;
+ padding: 17px;
+ }
+}
